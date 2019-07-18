@@ -1,0 +1,166 @@
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  /*background-color: rgba(217, 230, 249, 0.6);*/
+}
+
+.courses {
+  margin: 40px auto auto;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 1px 2px 2px 1px rgba(208,207,206,1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #525252;
+  margin-top: 40px;
+}
+
+.title {
+  font-weight: lighter;
+  font-size: 1.5em;
+}
+
+.cols {
+  font-size: 15px;
+}
+
+.cols th {
+  width: 50%;
+}
+
+th {
+  border-radius: 3px;
+  padding: 10px;
+}
+
+td {
+  padding: 10px 10px 10px 15px;
+  background-color: rgba(5, 208, 255, 0.51);
+  border-radius: 3px;
+  /*border: 1px solid rgba(8, 106, 145, 0.6);*/
+}
+
+/*        JS SECTION        */
+
+.js {
+  border: 3px solid rgba(228, 29, 41, 0.81);
+  box-shadow: 1px 2px 3px 1px rgba(228, 29, 41, 0.51);
+}
+
+.js th {
+  background-color: #F7E018;
+  color: #171717;
+}
+
+.js td {
+  padding: 10px 10px 10px 15px;
+  background-color: rgba(255, 13, 28, 0.71);
+  border-radius: 3px;
+  color: #fefefe;
+  text-shadow: 1px 1px 2px rgba(29, 13, 13, 0.76);
+  -webkit-animation: js-in 0.3s;
+  -o-animation: js-in 0.3s;
+  animation: js-in 0.3s;
+}
+
+.js td:hover {
+  -webkit-animation: 0.3s linear normal forwards js-out;
+  -o-animation: 0.3s linear normal forwards js-out;
+  animation: 0.3s linear normal forwards js-out;
+}
+
+@-webkit-keyframes js-in {
+  from   { -webkit-transform: scale(1.05);
+    background-color: rgba(255, 13, 28, 0.88);
+    box-shadow: 1px 2px 3px 2px rgba(128, 17, 28, 0.61);}
+  to { -webkit-transform: scale(1);
+       background-color: rgba(255, 13, 28, 0.71);
+       box-shadow: 1px 2px 3px 2px rgba(128, 17, 28, 0);}
+}
+
+@-webkit-keyframes js-out {
+  from   { -webkit-transform: scale(1);
+    box-shadow: 1px 2px 3px 2px rgba(128, 17, 28, 0);}
+  to { -webkit-transform: scale(1.05);
+    box-shadow: 1px 2px 3px 2px rgba(128, 17, 28, 0.61);
+    background-color: rgba(255, 13, 28, 0.88);}
+}
+
+.js span {
+  /*background-color: rgba(255, 152, 142, 0.71);*/
+  /*border-radius: 3px;*/
+  /*padding: 4px 15px 4px 15px;*/
+}
+
+.js:hover {
+  -webkit-animation: 0.3s linear normal forwards js-hover;
+  -o-animation: 0.3s linear normal forwards js-hover;
+  animation: 0.3s linear normal forwards js-hover;
+}
+
+@keyframes js-hover {
+  from {box-shadow: 1px 2px 3px 1px rgba(228, 29, 41, 0.51);}
+  to {box-shadow: 1px 2px 10px 1px rgba(228, 29, 41, 0.91);}
+}
+
+/*        HTML/CSS SECTION        */
+
+.html-css {
+  border: 3px solid rgb(0, 117, 187);
+  box-shadow: 1px 2px 3px 1px rgba(0, 117, 187, 0.5);
+  margin-bottom: 60px;
+}
+
+.html-css:hover {
+  -webkit-animation: 0.3s linear normal forwards html-css-hover;
+  -o-animation: 0.3s linear normal forwards html-css-hover;
+  animation: 0.3s linear normal forwards html-css-hover;
+}
+
+@keyframes html-css-hover {
+  from {box-shadow: 1px 2px 3px 1px rgba(0, 117, 187, 0.5);}
+  to {box-shadow: 1px 2px 10px 1px rgba(0, 117, 187, 0.9);}
+}
+
+.html-css th {
+  background-color: rgb(0, 93, 156);
+  color: #fbf8ff;
+}
+
+.html-css td {
+  background-color: rgba(11, 191, 241, 0.7);;
+  color: #fbf8ff;
+  text-shadow: 1px 1px 2px rgba(29, 13, 13, 0.76);
+  -webkit-animation: 0.3s html-css-in;
+  -o-animation: 0.3s html-css-in;
+  animation: 0.3s html-css-in;
+}
+
+.html-css td:hover {
+  -webkit-animation: 0.3s linear normal forwards html-css-out;
+  -o-animation: 0.3s linear normal forwards html-css-out;
+  animation: 0.3s linear normal forwards html-css-out;
+}
+
+@-webkit-keyframes html-css-in {
+  from   { -webkit-transform: scale(1.05);
+    background-color: rgba(11, 191, 241, 0.9);
+    box-shadow: 1px 2px 3px 2px rgba(11, 130, 178, 0.9);}
+  to { -webkit-transform: scale(1);
+    background-color: rgba(11, 191, 241, 0.7);
+    box-shadow: 1px 2px 3px 2px rgba(128, 17, 28, 0);}
+}
+
+@-webkit-keyframes html-css-out {
+  from   { -webkit-transform: scale(1);
+    box-shadow: 1px 2px 3px 2px rgba(128, 17, 28, 0);
+    background-color: rgba(11, 191, 241, 0.7);}
+  to { -webkit-transform: scale(1.05);
+    box-shadow: 1px 2px 3px 2px rgba(11, 130, 178, 0.9);
+    background-color: rgba(11, 191, 241, 0.9);}
+}
