@@ -55,6 +55,10 @@ td {
   animation: js-in-hover 0.3s;
 }
 
+.js tbody {
+  counter-reset: course;
+}
+
 .js:hover {
   -webkit-animation: 0.3s linear normal forwards js-out-hover;
   -o-animation: 0.3s linear normal forwards js-out-hover;
@@ -84,11 +88,44 @@ td {
   padding: 10px 10px 10px 15px;
   background-color: rgba(255, 13, 28, 0.71);
   border-radius: 3px;
+  position: relative;
   color: #fefefe;
   text-shadow: 1px 1px 2px rgba(29, 13, 13, 0.76);
   -webkit-animation: js-in 0.3s;
   -o-animation: js-in 0.3s;
   animation: js-in 0.3s;
+}
+
+.js td:first-child::before {
+  box-sizing: border-box;
+  opacity: 0.3;
+  font-size: 0.8em;
+  counter-increment: course;
+  content: counter(course);
+  position: absolute;
+  padding: 1px 0;
+  left: -3em;
+  background-color: rgba(255, 13, 28, 0.71);
+  width: 2em;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  box-shadow: 1px 2px 3px 1px rgba(228, 29, 41, 0.31);
+  transition: opacity ease-in 0.3s, box-shadow ease-in 0.3s, transform linear 0.3s;
+}
+
+.js td:first-child:hover::before {
+  opacity: 1;
+  box-shadow: 1px 2px 3px 1px rgba(228, 29, 41, 0.51);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
 }
 
 .js span::before {
@@ -141,6 +178,10 @@ td {
   animation: html-css-in-hover 0.3s;
 }
 
+.html-css tbody {
+  counter-reset: course;
+}
+
 .html-css:hover {
   -webkit-animation: 0.3s linear normal forwards html-css-out-hover;
   -o-animation: 0.3s linear normal forwards html-css-out-hover;
@@ -167,12 +208,45 @@ td {
 }
 
 .html-css td {
-  background-color: rgba(11, 191, 241, 0.7);;
+  background-color: rgba(11, 191, 241, 0.7);
   color: #fbf8ff;
+  position: relative;
   text-shadow: 1px 1px 2px rgba(29, 13, 13, 0.76);
   -webkit-animation: 0.3s html-css-in;
   -o-animation: 0.3s html-css-in;
   animation: 0.3s html-css-in;
+}
+
+.html-css td:first-child::before {
+  box-sizing: border-box;
+  opacity: 0.3;
+  font-size: 0.8em;
+  counter-increment: course;
+  content: counter(course);
+  position: absolute;
+  padding: 1px 0;
+  left: -3em;
+  background-color: rgba(11, 191, 241, 0.7);
+  width: 2em;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  box-shadow: 1px 2px 3px 1px rgba(0, 117, 187, 0.3);
+  transition: opacity ease-in 0.3s, box-shadow ease-in 0.3s, transform linear 0.3s;
+}
+
+.html-css td:first-child:hover::before {
+  opacity: 1;
+  box-shadow: 1px 2px 3px 1px rgba(0, 117, 187, 0.5);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
 }
 
 .html-css span::before {
