@@ -50,6 +50,29 @@ td {
 .js {
   border: 3px solid rgba(228, 29, 41, 0.81);
   box-shadow: 1px 2px 3px 1px rgba(228, 29, 41, 0.51);
+  -webkit-animation: js-in-hover 0.3s;
+  -o-animation: js-in-hover 0.3s;
+  animation: js-in-hover 0.3s;
+}
+
+.js:hover {
+  -webkit-animation: 0.3s linear normal forwards js-out-hover;
+  -o-animation: 0.3s linear normal forwards js-out-hover;
+  animation: 0.3s linear normal forwards js-out-hover;
+}
+
+@-webkit-keyframes js-in-hover {
+  from { -webkit-transform: scale(1.015);
+    box-shadow: 1px 2px 10px 1px rgba(228, 29, 41, 0.91);}
+  to { -webkit-transform: scale(1);
+    box-shadow: 1px 2px 3px 1px rgba(228, 29, 41, 0.51);}
+}
+
+@-webkit-keyframes js-out-hover {
+  from { -webkit-transform: scale(1);
+    box-shadow: 1px 2px 3px 1px rgba(228, 29, 41, 0.51);}
+  to { -webkit-transform: scale(1.015);
+    box-shadow: 1px 2px 10px 1px rgba(228, 29, 41, 0.91);}
 }
 
 .js th {
@@ -66,6 +89,16 @@ td {
   -webkit-animation: js-in 0.3s;
   -o-animation: js-in 0.3s;
   animation: js-in 0.3s;
+}
+
+.js span::before {
+  content: open-quote;
+  color: rgb(255, 179, 170);
+}
+
+.js span::after {
+  content: close-quote;
+  color: rgb(255, 179, 170);
 }
 
 .js td:hover {
@@ -97,34 +130,35 @@ td {
   /*padding: 4px 15px 4px 15px;*/
 }
 
-.js:hover {
-  -webkit-animation: 0.3s linear normal forwards js-hover;
-  -o-animation: 0.3s linear normal forwards js-hover;
-  animation: 0.3s linear normal forwards js-hover;
-}
-
-@keyframes js-hover {
-  from {box-shadow: 1px 2px 3px 1px rgba(228, 29, 41, 0.51);}
-  to {box-shadow: 1px 2px 10px 1px rgba(228, 29, 41, 0.91);}
-}
-
 /*        HTML/CSS SECTION        */
 
 .html-css {
   border: 3px solid rgb(0, 117, 187);
   box-shadow: 1px 2px 3px 1px rgba(0, 117, 187, 0.5);
   margin-bottom: 60px;
+  -webkit-animation: html-css-in-hover 0.3s;
+  -o-animation: html-css-in-hover 0.3s;
+  animation: html-css-in-hover 0.3s;
 }
 
 .html-css:hover {
-  -webkit-animation: 0.3s linear normal forwards html-css-hover;
-  -o-animation: 0.3s linear normal forwards html-css-hover;
-  animation: 0.3s linear normal forwards html-css-hover;
+  -webkit-animation: 0.3s linear normal forwards html-css-out-hover;
+  -o-animation: 0.3s linear normal forwards html-css-out-hover;
+  animation: 0.3s linear normal forwards html-css-out-hover;
 }
 
-@keyframes html-css-hover {
-  from {box-shadow: 1px 2px 3px 1px rgba(0, 117, 187, 0.5);}
-  to {box-shadow: 1px 2px 10px 1px rgba(0, 117, 187, 0.9);}
+@-webkit-keyframes html-css-in-hover {
+  from { -webkit-transform: scale(1.015);
+    box-shadow: 1px 2px 10px 1px rgba(0, 117, 187, 0.9);}
+  to { -webkit-transform: scale(1);
+    box-shadow: 1px 2px 3px 1px rgba(0, 117, 187, 0.5);}
+}
+
+@-webkit-keyframes html-css-out-hover {
+  from { -webkit-transform: scale(1);
+    box-shadow: 1px 2px 3px 1px rgba(0, 117, 187, 0.5);}
+  to { -webkit-transform: scale(1.015);
+    box-shadow: 1px 2px 10px 1px rgba(0, 117, 187, 0.9);}
 }
 
 .html-css th {
@@ -140,6 +174,17 @@ td {
   -o-animation: 0.3s html-css-in;
   animation: 0.3s html-css-in;
 }
+
+.html-css span::before {
+  content: open-quote;
+  color: #a0faff;
+}
+
+.html-css span::after {
+  content: close-quote;
+  color: #a0faff;
+}
+
 
 .html-css td:hover {
   -webkit-animation: 0.3s linear normal forwards html-css-out;
